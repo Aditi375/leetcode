@@ -4,10 +4,10 @@ public:
         int m=INT_MIN;
         
         
-        for(int i=0;i<n.length();i++)
-        {
-            m=max(m,n[i]-'0');
-        }
+       for(auto i:n)
+       {
+           m=max(m,i-'0');
+       }
         return m;
     }
 };
