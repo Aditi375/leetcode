@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minPartitions(string n) {
-        int m=INT_MIN;
+        int m=0;
         
         
        for(auto i:n)
