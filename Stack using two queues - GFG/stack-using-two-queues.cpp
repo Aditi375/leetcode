@@ -56,27 +56,28 @@ public:
 void QueueStack :: push(int x)
 {
         // Your Code
-        q2.push(x);
-    while(!q1.empty())
-    {
-        q2.push(q1.front());
-        q1.pop();
-        
-        
-    }
-    swap(q1,q2);
+        q1.push(x);
+    
 }
 
 //Function to pop an element from stack using two queues. 
 int QueueStack :: pop()
 {
         // Your Code 
-        
         if(q1.empty())
         {
             return -1;
         }
-        int x=q1.front();
+        while(q1.size()!=1)
+        {
+            q2.push(q1.front());
+            q1.pop();
+        }
+        int res=q1.front();
         q1.pop();
-        return x;
+        
+        swap(q1,q2);
+        
+        return res;
+        
 }
