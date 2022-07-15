@@ -44,37 +44,3 @@ public:
             
     }
 };
-/*class Solution {
-public:
-    int calPoints(vector<string>& ops) {
-        int sum = 0;
-        stack<int>st;
-        for(int i=0;i<ops.size();i++){
-            if(ops[i]=="+"){
-                int f = st.top();
-                st.pop();
-                int s = st.top();
-                st.push(f);
-                st.push(f+s);
-                sum+=f+s;
-            }
-            else if(ops[i]=="D"){
-                int f = st.top();
-                sum+=f*2;
-                st.push(f*2);
-            }
-            else if(ops[i]=="C"){
-                int f = st.top();
-                st.pop();
-                sum-=f;
-            }
-            else{
-                int num = stoi(ops[i]);
-                st.push(num);
-                sum+=num;
-            }
-        }
-        return sum;
-    }
-};
-*/
