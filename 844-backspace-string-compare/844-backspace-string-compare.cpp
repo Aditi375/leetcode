@@ -13,7 +13,7 @@ public:
             {
                 sts.pop();
             }
-            else
+            else if(s[i]!='#')
             {
                 sts.push(s[i]);
             }
@@ -24,18 +24,18 @@ public:
             {
                 stt.pop();
             }
-            else
+            else if(t[i]!='#')
             {
                 stt.push(t[i]);
             }
         }
         
-        while(!sts.empty()&&sts.top()!='#')
+        while(!sts.empty())
         {
             ns=ns+sts.top();
             sts.pop();
         }
-        while(!stt.empty()&&stt.top()!='#')
+        while(!stt.empty())
         {
             nt=nt+stt.top();
             stt.pop();
