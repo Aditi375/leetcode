@@ -30,18 +30,17 @@ public:
             }
         }
         
-        while(!sts.empty())
+       
+        while(!stt.empty()&&!sts.empty())
         {
-            ns=ns+sts.top();
+           if(sts.top()!=stt.top())
+           {
+               return false;
+           }
+            stt.pop();
             sts.pop();
         }
-        while(!stt.empty())
-        {
-            nt=nt+stt.top();
-            stt.pop();
-        }
-        cout<<ns;
-        cout<<nt;
-        return ns==nt;
+        
+       return (stt.empty()&&sts.empty());
     }
 };
