@@ -37,9 +37,11 @@ public:
        while(!st.empty())
        {
            while(st.top().second!=0)
-           {r+=st.top().first;
+           {
+           r+=st.top().first;
             st.top().second--;
            }
+           
            st.pop();
        }
 reverse(r.begin(),r.end());
