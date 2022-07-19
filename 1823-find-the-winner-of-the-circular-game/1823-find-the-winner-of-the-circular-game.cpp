@@ -11,7 +11,7 @@ public:
         while(q.size()!=1)
         {
            
-            if(i!=k)
+            if(i<k)
             {
                
                 int temp=q.front();
@@ -19,7 +19,7 @@ public:
                 q.push(temp);
                  i++;
             }
-            else
+            else if(i==k)
             {
                 q.pop();
                 i=1;
