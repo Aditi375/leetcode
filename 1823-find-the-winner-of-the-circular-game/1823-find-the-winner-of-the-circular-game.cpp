@@ -7,23 +7,23 @@ public:
         {
             q.push(i);
         }
-         int i=1;
+       
         while(q.size()!=1)
         {
-           
-            if(i<k)
+          
+            for(int i=1;i<k;i++)
             {
+                
+            
                
                 int temp=q.front();
                 q.pop();
                 q.push(temp);
-                 i++;
+                
             }
-            else if(i==k)
-            {
-                q.pop();
-                i=1;
-            }
+              q.pop();
+              
+           
         }
         return q.front();
     }
