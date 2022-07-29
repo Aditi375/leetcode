@@ -13,11 +13,6 @@ class Solution {
 public:
     bool checkTree(TreeNode* root) {
         
-        if(!root)
-        {
-            return true;
-        }
-        
        
      
         
