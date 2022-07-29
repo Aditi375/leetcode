@@ -19,14 +19,7 @@ public:
         }
         
         int s=0;
-        if(root->left)
-        {
-            s+=root->left->val;
-        }
-        if(root->right)
-        {
-            s+=root->right->val;
-        }
+        s+=root->right->val+root->left->val;
         
         return root->val==s;
     }
