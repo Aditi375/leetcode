@@ -18,9 +18,9 @@ public:
             return true;
         }
         
-        int s=0;
-        s+=root->right->val+root->left->val;
+       
+     
         
-        return root->val==s;
+        return root->val==root->right->val+root->left->val;
     }
 };
