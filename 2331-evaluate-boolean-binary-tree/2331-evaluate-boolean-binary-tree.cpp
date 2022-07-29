@@ -32,7 +32,7 @@ public:
             
         }
         
-        return root->val;
+        return root->val==1;
         
         
     }
