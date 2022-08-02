@@ -21,6 +21,7 @@ public:
     void preorder(TreeNode* root , int maxVal){
         if(!root) return;
         if(root->val>=maxVal) ans++;
+    
         preorder(root->left,max(maxVal,root->val));
         preorder(root->right,max(maxVal,root->val));
     }
